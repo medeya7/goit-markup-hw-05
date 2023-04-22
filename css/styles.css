@@ -12,6 +12,10 @@
     --light-slate: #8e8f99;
     --icons-customers: #afb1b8;
     --green: #31d0aa;
+    --dairy: #FCFCFC;
+
+
+    --modal-idx: 100;
 
 }
 
@@ -197,6 +201,8 @@ img {
 
 
  .menu-link {
+    position: relative;
+
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -207,6 +213,33 @@ img {
     color: var(--navy-blue);
 
  }
+
+
+ .menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+ }
+
+
+ .menu-link.current {
+    color: var(--ocean);
+
+ }
+
+ .menu-link.current::after,
+ .menu-link:hover::after,
+ .menu-link:focus::after {
+    background-color: var(--ocean);
+ }
+
+
 
  .menu-link:hover,
  .menu-link:focus {
@@ -554,7 +587,39 @@ margin-bottom: 8px;
     
 }
 
+/* MODAL STYLES */
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--modal-idx);
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 19, 25, 0,2);
+    backdrop-filter: blur(6px);
+}
+
+.modal {
+    position: absolute;
+    top: calc(50% - 292px);
+    left: calc(50% - 225px);
+
+    width: 408px;
+    min-height: 584px;
+    padding: 24px;
+
+    background-color: var(--dairy);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.modal-btn {
+    display: block;
+    margin-left: auto;
+}
 
 
 
@@ -629,8 +694,31 @@ margin-bottom: 8px;
 .img-portfolio-item {
     width: calc((100% - (24px * 2)) / 3);
     
-    
 }
+
+
+.img-portfolio-box {
+    position: relative;
+
+}
+
+
+.img-portfolio-label {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    
+    width: 90%;
+    padding: 15px;
+
+    color: var(--cloud);
+    border-radius: 20px;
+    background-color: var(--logo-color);
+    backdrop-filter: blur(3px);
+
+
+}
+
 
 
 
