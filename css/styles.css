@@ -203,8 +203,8 @@ img {
 
 
  .menu-link {
+    transition: color var(--animation-base);
     position: relative;
-
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -230,14 +230,7 @@ img {
  }
 
 
- .menu-link.current {
-    color: var(--ocean);
-
- }
-
- .menu-link.current::after,
- .menu-link:hover::after,
- .menu-link:focus::after {
+ .menu-link.current::after {
     background-color: var(--ocean);
  }
 
@@ -258,6 +251,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--slate);
+    transition: color var(--animation-base);
 
  }
 
@@ -319,14 +313,14 @@ img {
     color: var(--white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition: background-color var(--animation-base);
     
  }
 
 
  .modal-btn:hover,
  .modal-btn:focus {
-    color: var(--white);
-    background: var(--ocean);
+    background-color: var(--ocean);
  }
 
 
@@ -402,11 +396,12 @@ margin-bottom: 8px;
     align-items: center;
     background: var(--logo-color);
     border-radius: 50%;
+    transition: background-color var(--animation-base);
 }
 
 .socials-link:hover,
 .socials-link:focus {
-    background: var(--ocean);
+    background-color: var(--ocean);
 }
 
 .socials-icom {
@@ -472,13 +467,13 @@ margin-bottom: 8px;
 .customers-link {
     border: 1px solid var(--light-slate);
     border-radius: 4px;
-    padding: 16px 32px;
     display: flex;
     height: 88px;
     justify-content: center;
     align-items: center;
     color: var(--icons-customers);
     color: var(--light-slate);
+    transition: border var(--animation-base), color var(--animation-base);
 }
 
 .customers-link:hover,
@@ -539,6 +534,7 @@ margin-bottom: 8px;
     display: flex; 
     align-items: center; 
     justify-content: center;
+    transition: background-color var(--animation-base);
 }
 
 .social-link:hover,
@@ -599,8 +595,8 @@ margin-bottom: 8px;
 
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 47, 66, 0,4);
-    backdrop-filter: blur(6px);
+    background-color: rgba(46, 47, 66, 0.4);
+   
 
     transition: opacity var(--animation-base), visibility var(--animation-base);
 }
@@ -681,7 +677,7 @@ margin-bottom: 8px;
     letter-spacing: 0.04em;
     cursor: pointer;
     color: var(--logo-color);
-    background: var(--cloud);
+    background-color: var(--cloud);
     
     padding-top: 12px; 
     padding-bottom: 12px; 
@@ -689,13 +685,14 @@ margin-bottom: 8px;
     padding-right: 24px;
     border: 1px solid var(--mood);
     border-radius: 4px;
+    transition: color var(--animation-base), background-color var(--animation-base), border var(--animation-base), box-shadow var(--animation-base);
 }
 
 .list-btn:hover,
 .list-btn:focus {
-    background: var(--ocean);
+    background-color: var(--ocean);
     color: var(--white);
-    background: var(--ocean);
+    background-color: var(--ocean);
     color: var(--white);
     border: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
@@ -720,7 +717,7 @@ margin-bottom: 8px;
 
 .portfolio-link {
     display: block;
-
+    transition: box-shadow var(--animation-base);
 }
 
 .portfolio-link:hover,
